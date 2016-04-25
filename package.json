@@ -1,7 +1,7 @@
 {
-  "name": "nano-sched-json",
-  "version": "1.0.2",
-  "description": "JSON parsing and stringifying nano-sched plugin",
+  "name": "nano-sched-debug",
+  "version": "1.0.0",
+  "description": "Some debug purpose functions plugin for nano-sched",
   "main": "index.js",
   "scripts": {
     "test": "mocha --reporter spec -u tdd",
@@ -17,20 +17,20 @@
     "clone": "1",
     "nano-timer": "1",
     "nano-fs": "1",
-    "nano-json": "1",
+    "nano-debug": "1",
     "mocha": "2",
     "colors": "0",
     "istanbul": "0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Holixus/nano-sched-json.git"
+    "url": "git+https://github.com/Holixus/nano-sched-debug.git"
   },
   "keywords": [],
   "author": "Vladimir Antonov <me@holix.ru>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Holixus/nano-sched-json/issues"
+    "url": "https://github.com/Holixus/nano-sched-debug/issues"
   },
-  "homepage": "https://github.com/Holixus/nano-sched-json#readme"
+  "homepage": "https://github.com/Holixus/nano-sched-debug#readme"
 }
