@@ -1,6 +1,6 @@
 {
   "name": "nano-sched-debug",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Some debug purpose functions plugin for nano-sched",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "nano-promise": "1",
+    "nano-fs": "1",
     "repl.history": "0"
   },
   "devDependencies": {
@@ -17,7 +18,7 @@
     "clone": "1",
     "nano-timer": "1",
     "nano-fs": "1",
-    "nano-debug": "1",
+    "nano-json": "1",
     "mocha": "2",
     "colors": "0",
     "istanbul": "0"

@@ -1,6 +1,7 @@
 "use strict";
 
 var Promise = require('nano-promise'),
+	fs = require('nano-fs'),
     repl = require('repl'),
     Path = require('path');
 
@@ -8,14 +9,17 @@ module.exports = {
 
 repl: function (log, data) {
 	return new Promise(function (resolve, reject) {
-		var rl = repl.start({ prompt: log.stage+'> ', useGlobal: 1, ignoreUndefined: 1, useColors: 1 }),
+		var rl = repl.start({ prompt: log.context+'> ', useGlobal: 1, ignoreUndefined: 1, useColors: 1 }),
 		    ctx = rl.context;
+		ctx.log = log;
 		ctx.data = data;
-		ctx.seq = seq;
 		rl.on('exit', function () {
 			resolve();
 		});
-		require('repl.history')(rl, Path.join(data.opts.dumps_folder, '.history'));
+		fs.mkpath(data.opts.dumps_folder)
+			.then(function () {
+				require('repl.history')(rl, Path.join(data.opts.dumps_folder, '.history'));
+			})
 	});
 },
 
